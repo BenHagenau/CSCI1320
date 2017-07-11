@@ -1,0 +1,98 @@
+clear all;
+clock=cell(7,7);
+time=0;
+clock{4,4}=time;
+clock{1,4}=8;
+clock{4,7}=2;
+clock{7,4}=4;
+clock{4,1}=6;
+r1=3;
+c1=4;
+r2=2;
+c2=4;
+clock{r1,c1}='|';
+clock{r2,c2}='|';
+cellplot(clock)
+while 1
+    pause(1)
+    clock{r1,c1}=[];
+    clock{r2,c2}=[];
+    c1=c1+1;
+    c2=c2+2;
+    clock{r1,c1}='/';
+    clock{r2,c2}='/';
+    cellplot(clock)
+    time=time+1;
+    clock{4,4}=time;
+    pause(1)
+    clock{r1,c1}=[];
+    clock{r2,c2}=[];
+    r1=r1+1;
+    r2=r2+2;
+    clock{r1,c1}='-';
+    clock{r2,c2}='-';
+    cellplot(clock)
+    time=time+1;
+    clock{4,4}=time;
+    pause(1)
+    clock{r1,c1}=[];
+    clock{r2,c2}=[];
+    r1=r1+1;
+    r2=r2+2;
+    clock{r1,c1}='\';
+    clock{r2,c2}='\';
+    cellplot(clock)
+    time=time+1;
+    clock{4,4}=time;
+    pause(1)
+    clock{r1,c1}=[];
+    clock{r2,c2}=[];
+    c1=c1-1;
+    c2=c2-2;
+    clock{r1,c1}='|';
+    clock{r2,c2}='|';
+    cellplot(clock)
+    time=time+1;
+    clock{4,4}=time;
+    pause(1)
+    clock{r1,c1}=[];
+    clock{r2,c2}=[];
+    c1=c1-1;
+    c2=c2-2;
+    clock{r1,c1}='/';
+    clock{r2,c2}='/';
+    cellplot(clock)
+    time=time+1;
+    clock{4,4}=time;
+    pause(1)
+    clock{r1,c1}=[];
+    clock{r2,c2}=[];
+    r1=r1-1;
+    r2=r2-2;
+    clock{r1,c1}='-';
+    clock{r2,c2}='-';
+    cellplot(clock)
+    time=time+1;
+    clock{4,4}=time;
+    pause(1)
+    clock{r1,c1}=[];
+    clock{r2,c2}=[];
+    r1=r1-1;
+    r2=r2-2;
+    clock{r1,c1}='\';
+    clock{r2,c2}='\';
+    cellplot(clock)
+    time=time+1;
+    clock{4,4}=time;
+    pause(1)
+    clock{r1,c1}=[];
+    clock{r2,c2}=[];
+    c1=r1+1;
+    c2=r2+2;
+    clock{r1,c1}='|';
+    clock{r2,c2}='|';
+    cellplot(clock)
+    time=time+1;
+    clock{4,4}=time;
+end
+    
